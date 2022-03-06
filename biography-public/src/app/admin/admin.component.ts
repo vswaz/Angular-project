@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Login } from '../biography';
 
 @Component({
   selector: 'app-admin',
@@ -7,9 +8,18 @@ import { Component, OnInit } from '@angular/core';
 })
 export class AdminComponent implements OnInit {
 
-  constructor() { }
+  login: Login = {
+   username: '',
+   password: ''
+
+  }  
+constructor() { }
 
   ngOnInit(): void {
+
   }
+ onSubmit(): void{
+  // console.log(login.username);
+ }
 
 }

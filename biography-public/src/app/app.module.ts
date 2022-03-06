@@ -37,6 +37,10 @@ import { CreateComponent } from './create/create.component';
       {
         path: 'admin',
         component: AdminComponent
+      },
+      {
+        path: 'create',
+        component: CreateComponent
       }
       // {
       //   path: 'biographys/:biographyid',
