@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { BiographyServiceService } from '../biography-service.service';
+import { Biography } from '../biography';
 
 @Component({
   selector: 'app-create',
@@ -7,9 +9,22 @@ import { Component, OnInit } from '@angular/core';
 })
 export class CreateComponent implements OnInit {
 
-  constructor() { }
+  public newBiography: Biography = {
+    firstname: '',
+    lastname: '',
+    country: '',
+    language: '',
+    age: '',
+    height: '',
+    marital: '',
+    message: ''
+  }
+  constructor(private biographyService: BiographyServiceService) { }
 
   ngOnInit(): void {
   }
+  public createNewBiography(newBiography: Biography): void{
+    this.biographyService.createBiography(newBiography);
 
+}
 }

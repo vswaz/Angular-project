@@ -16,8 +16,17 @@ const getBiographys = (req, res) => {
 
 const createBiography = (req, res) => {
     Biography.create({
-        name: req.body.name,
-        type: req.body.type
+        firstname: req.body.firstname,
+        lastname: req.body.lastname,
+        country: req.body.country,
+        language: req.body.language,
+        age: req.body.age,
+        height: req.body.height,
+        marital: req.body.marital,
+        message: req.body.message
+        
+        
+
     }, (err, biographydata) => {
         if (err){
             res.status(400)
