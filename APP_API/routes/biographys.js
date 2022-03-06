@@ -1,7 +1,7 @@
 var express = require('express');
 var router = express.Router();
 
-const ctrlFood = require('../controllers/biography');
+const ctrlBiography = require('../controllers/biography');
 
 router.route('/biographys')
     .get(ctrlBiography.getBiographys)
