@@ -6,9 +6,10 @@ h1 {
     margin-bottom: 40px
 }
 
+/*
 label {
-    color: #333
-}
+    color: red
+}*/
 
 .btn-send {
     font-weight: 300;
@@ -29,4 +30,9 @@ label {
 }
 #changethis{
     color: aqua;
+}
+
+
+form#contact-form {
+    color: red;
 }

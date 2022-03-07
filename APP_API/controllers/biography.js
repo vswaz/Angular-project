@@ -3,12 +3,16 @@ const mongoose = require('mongoose');
 const Biography = mongoose.model('biography');
 
 const getBiographys = (req, res) => {
+    console.log("here is donw fdfa")
     Biography.find().exec(function(err, biographydata){
+        console.log(biographydata);
         if (err) {
+        
             res.status(404)
             .json(err);
         return;
         }
+        console.log("working this"); 
         res.status(200)
         .json(biographydata);
     });
@@ -85,10 +89,19 @@ const updateBiography = (req, res) => {
             .json(err);
             return;
         }
-        biographydata.name = req.body.name;
-        biographydata.type = req.body.type;
+        biographydata.firstname = req.body.firstname;
+        biographydata.lastname = req.body.lastname;
+        biographydata.country = req.body.country;
+        biographydata.language = req.body.language;
+        biographydata.age = req.body.age;
+        biographydata.height = req.body.height;
+        biographydata.marital = req.body.marital;
+        biographydata.message = req.body.message;
+
+
         biographydata.save((err, biographydata) => {
             if (err) {
+                console.log("this is fimdone");
                 res.status(404)
                 .json(err);
             } else {

@@ -1,7 +1,7 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { HttpClientModule, HttpContext } from '@angular/common/http';
-import { APP_BASE_HREF } from '@angular/common';
+import { APP_BASE_HREF, CommonModule } from '@angular/common';
 import { RouterModule } from '@angular/router';
 import { FormsModule } from '@angular/forms';
 
@@ -12,9 +12,10 @@ import { AboutComponent } from './about/about.component';
 import { DetailsPageComponent } from './details-page/details-page.component';
 import { CreateComponent } from './create/create.component';
 
+
 @NgModule({
   declarations: [
-    
+    HomepageComponent,
     FrameworkComponent,
          AdminComponent,
          AboutComponent,
@@ -25,6 +26,7 @@ import { CreateComponent } from './create/create.component';
     BrowserModule,
     HttpClientModule,
     FormsModule,
+    CommonModule,
     RouterModule.forRoot([
       {
         path: '',
@@ -41,11 +43,11 @@ import { CreateComponent } from './create/create.component';
       {
         path: 'create',
         component: CreateComponent
-      }
-      // {
-      //   path: 'biographys/:biographyid',
-      //   component: DetailsPageComponent
-      // },
+      },
+       {
+        path: 'biographys/:biographyid',
+        component: DetailsPageComponent
+       }
       
     ])
   ],

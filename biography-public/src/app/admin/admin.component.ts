@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Login } from '../biography';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-admin',
@@ -8,18 +9,22 @@ import { Login } from '../biography';
 })
 export class AdminComponent implements OnInit {
 
-  login: Login = {
+  public login: Login = {
    username: '',
    password: ''
 
   }  
-constructor() { }
+constructor(private router: Router) { }
 
   ngOnInit(): void {
 
   }
- onSubmit(): void{
-  // console.log(login.username);
+public adminCheck(login: Login): void {
+  
+  if(login.username == "admin" && login.password == "admin"){
+    this.router.navigate(['/create'])
+     console.log("is password check working");
+   }
  }
 
 }
