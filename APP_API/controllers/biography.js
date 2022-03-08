@@ -5,7 +5,7 @@ const Biography = mongoose.model('biography');
 const getBiographys = (req, res) => {
     console.log("here is donw fdfa")
     Biography.find().exec(function(err, biographydata){
-        console.log(biographydata);
+        
         if (err) {
         
             res.status(404)
@@ -28,18 +28,18 @@ const createBiography = (req, res) => {
         height: req.body.height,
         marital: req.body.marital,
         message: req.body.message
-        
-        
-
     }, (err, biographydata) => {
+        console.log(req.body);
         if (err){
+            console.log(err);
             res.status(400)
+            
             .json(err);
         } else {
             res.status(201)
             .json(biographydata);
         }
-        console.log(req.body);
+        
     });
 };
 

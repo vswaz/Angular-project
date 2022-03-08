@@ -1,5 +1,6 @@
 import { Component, OnInit } from "@angular/core";
 export class Biography {
+    _id: string;
     firstname: string;
     lastname: string;
     country: string;

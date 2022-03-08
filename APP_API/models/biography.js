@@ -18,10 +18,10 @@ const biographySchema = new mongoose.Schema({
         type: String
     },
     age: {
-        type: Number
+        type: String
     },
     height: {
-        type: Number
+        type: String
     },
     marital: {
         type: String

@@ -1,0 +1,10 @@
+.cardholder{
+    margin-top: 5em;
+}
+
+.cardholder {
+    display: flex;
+  justify-content: center;
+  flex-direction: row;
+
+}

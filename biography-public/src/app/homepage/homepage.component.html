@@ -4,25 +4,19 @@
     </div>
   </div>
 
+
 <div class="container">
     <div class="row">
-        <div class="col">
+        <div class="col cardholder" *ngFor="let biography of biographys;">
             <div class="card" style="width: 18rem;">
-                <img class="card-img-top" src="assets/image.jpg" alt="Card image cap">
+                
                 <div class="card-body">
-                  <ul class="list-unstyled">
-                    <li *ngFor="let biography of biographys;">
-                        <p>{{biography.firstname}}</p>
-                      
-                    </li>
-                    <br>
-                    
-                    
-                  </ul>
-                  <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                  <a routerLink="/biographys/{{biography._id}}"> <h4>{{biography.firstname}}{{biography.lastname}}</h4></a>
+                  
+                  <br> 
                 </div>
             </div>
         </div>
-        
-    </div>
+      </div>
+    <br> <br> 
 </div>
