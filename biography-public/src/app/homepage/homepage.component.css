@@ -8,3 +8,8 @@
   flex-direction: row;
 
 }
+img {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+  }

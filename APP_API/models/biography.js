@@ -31,6 +31,5 @@ const biographySchema = new mongoose.Schema({
     }
  });
 
-//let Food = mongoose.model('food', foodSchema);
-//module.exports = mongoose.models.food || Food;
+
 mongoose.model('biography', biographySchema);

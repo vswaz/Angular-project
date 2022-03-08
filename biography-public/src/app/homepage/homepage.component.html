@@ -4,19 +4,18 @@
     </div>
   </div>
 
-
+  <img src="../../assets/images/LOGO.PNG" class="img-fluid" alt="Biography online" style="width: 50%;">
+  <br>
+  <h2>Please select artist of your</h2>
 <div class="container">
     <div class="row">
         <div class="col cardholder" *ngFor="let biography of biographys;">
             <div class="card" style="width: 18rem;">
-                
                 <div class="card-body">
-                  <a routerLink="/biographys/{{biography._id}}"> <h4>{{biography.firstname}}{{biography.lastname}}</h4></a>
-                  
-                  <br> 
+                  <a routerLink="/biographys/{{biography._id}}"> <h1><span class="middle">{{biography.firstname}}{{biography.lastname}}</span></h1></a>
                 </div>
             </div>
         </div>
       </div>
-    <br> <br> 
+    
 </div>

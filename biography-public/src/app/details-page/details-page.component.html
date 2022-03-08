@@ -1,17 +1,19 @@
 <div class="row banner">
     <div class="col-12">
-      <h1>detail page works</h1>
+      <h1>{{newBiography.firstname}}{{newBiography.lastname}}</h1>
     </div>
   </div>
 <div class="row">
   <div class="col-12 col-md-8">
-      <h1>{{newBiography.firstname}}</h1>
-      <h1>{{newBiography.lastname}}</h1>
-      <p><b>Country:</b> {{newBiography.country}}</p>
-      <p><b>Language:</b> {{newBiography.language}}</p>
-      <p><b>Age:</b> {{newBiography.age}}</p>
-      <p><b>Height:</b> {{newBiography.height}}</p>
-      <p><b>Marital Status:</b> {{newBiography.marital}}</p>
-      <p><b>Description:</b> {{newBiography.message}}</p>
+      
+      <h4><b>Country:</b> {{newBiography.country}}</h4>
+      <h4><b>Language:</b> {{newBiography.language}}</h4>
+      <h4><b>Age:</b> {{newBiography.age}}</h4>
+      <h4><b>Height:</b> {{newBiography.height}}</h4>
+      <h4><b>Marital Status:</b> {{newBiography.marital}}</h4>
+      <br>
+      <h4><b>Description:</b></h4>
+
+        <br><h5> {{newBiography.message}}</h5>
   </div>
 </div>

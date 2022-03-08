@@ -1,9 +1,9 @@
-//let Food = require("../../APP_SERVER/models/food");
+
 const mongoose = require('mongoose');
 const Biography = mongoose.model('biography');
 
 const getBiographys = (req, res) => {
-    console.log("here is donw fdfa")
+    
     Biography.find().exec(function(err, biographydata){
         
         if (err) {
@@ -70,7 +70,7 @@ const updateBiography = (req, res) => {
         res
         .status(404)
         .json({
-            "message": "Not found, foodid is required"
+            "message": "Not found, biographyid is required"
         });
     return;
     }
@@ -101,7 +101,7 @@ const updateBiography = (req, res) => {
 
         biographydata.save((err, biographydata) => {
             if (err) {
-                console.log("this is fimdone");
+                
                 res.status(404)
                 .json(err);
             } else {
