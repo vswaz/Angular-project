@@ -1,6 +1,6 @@
 <div class="row banner" >
     <div class="col-12">
-      <h1>create page works</h1>
+      <h1>Admin Mode</h1>
     </div>
   </div>
   <div class="container"> <div class=" text-center mt-5 ">
@@ -8,14 +8,14 @@
 </div>
 <div class="row ">
     <div class="col-lg-7 mx-auto">
-        <div class="card mt-2 mx-auto p-4 bg-light">
-            <div class="card-body bg-light">
+        <div class="card mt-2 mx-auto p-4">
+            <div class="card-body">
                 <div class="container">
                     <form id="contact-form" role="form" (ngSubmit)= "createNewBiography(newBiography)">
                         <div class="controls">
                             <div class="row">
 
-                                <div class="col-md-6">
+                                <div class="col-md-6" >
                                     <div class="form-group"> 
                                       <label for="form_name">FIRSTNAME </label> 
                                       <input [(ngModel)]="newBiography.firstname" id="form_name" type="text" name="firstname" class="form-control" placeholder="PLEASE ENTER THE FIRST NAME" required="required" data-error="Firstname is required." >
