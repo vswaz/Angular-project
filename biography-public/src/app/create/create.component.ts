@@ -25,9 +25,15 @@ export class CreateComponent implements OnInit {
 
   ngOnInit(): void {
   }
-  public createNewBiography(newBiography: Biography): void{
-    this.biographyService.createBiography(newBiography);
-    this.router.navigate(['/'])
+  public async createNewBiography(newBiography: Biography){
+    
+    const response = await this.biographyService.createBiography(newBiography);
+    console.log(response);
+    if(response['firstname'] != undefined ){
+      this.router.navigate(['/'])
+    }
+   
+    
 
 }
 }

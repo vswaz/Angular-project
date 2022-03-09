@@ -31,6 +31,7 @@ export class BiographyServiceService {
   }
   private handleError(error: any){
     console.log("error");
+    return error;
   }
 
   
