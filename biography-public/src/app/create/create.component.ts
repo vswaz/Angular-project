@@ -26,7 +26,9 @@ export class CreateComponent implements OnInit {
   ngOnInit(): void {
   }
   public async createNewBiography(newBiography: Biography){
-    
+    // if(newBiography['firstname'] == ''){
+      
+    // }
     const response = await this.biographyService.createBiography(newBiography);
     console.log(response);
     if(response['firstname'] != undefined ){
