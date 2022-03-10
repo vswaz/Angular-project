@@ -34,7 +34,7 @@ export class DetailsPageComponent implements OnInit {
       .subscribe((newBiography: Biography) => {
         console.log('Selected Biography', newBiography);
         this.newBiography = newBiography;
-
+          
       }
       );
   }
