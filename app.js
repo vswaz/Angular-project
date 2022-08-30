@@ -27,7 +27,7 @@ app.use(cookieParser());
 //app.use(express.static(path.join(__dirname, 'public')));
 app.use(express.static(path.join(__dirname, 'biography-public', 'build')));
 
-// app.use('/', indexRouter);
+ app.use('/', indexRouter);
 // app.use('/users', usersRouter);
 
 app.use('/api', apiRouter);
@@ -45,7 +45,7 @@ app.use(function(err, req, res, next) {
 
   // render the error page
   res.status(err.status || 500);
-  res.render('error');
+  res.json('error');
 });
 
 module.exports = app;
